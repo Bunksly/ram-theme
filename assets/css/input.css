@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/wp-content/themes/ram-theme/assets/fonts/Roboto/Roboto-VariableFont_wdth,wght') format('ttf');
+}
+
+@theme {
+  --color-primary: #2683FE;
+  --color-dark: oklch(21% 0.034 264.665);
+  --color-light: oklch(44.6% 0.03 256.802);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a:hover, a:focus {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+p, a {
+  color: var(--color-dark);
+}
