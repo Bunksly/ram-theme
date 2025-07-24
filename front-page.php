@@ -1,25 +1,35 @@
 <?php get_header(); ?>
 
-<section class="relative w-full h-[calc(100vh-218px)] overflow-hidden">
+<section class="relative w-full max-h-[calc(100vh-218px)] overflow-hidden">
     <div class="slider h-full">
         <div class="relative h-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide1.jpg" class="object-cover w-full h-full" alt="Slide 1">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide1.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 1">
         </div>
         <div class="relative h-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide2.jpg" class="object-cover w-full h-full" alt="Slide 2">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide2.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 2">
         </div>
         <div class="relative h-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide3.jpg" class="object-cover w-full h-full" alt="Slide 3">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide3.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 3">
         </div>
     </div>
 
     <!-- Overlay content -->
-    <div class="absolute inset-0 bg-black/40 flex items-center">
+    <div class="sm:flex absolute inset-0 bg-black/40 hidden items-center">
         <div class="w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
-                <div class="backdrop-blur-sm p-6 rounded-xl text-white max-w-xl">
-                    <h1 class="text-4xl font-bold">RAM Construction</h1>
+                <div class="backdrop-blur-sm bg-black/40 p-6 rounded-xl text-white max-w-xl">
+                    <h1 class="text-4xl font-bold"><span class="text-primary">RAM</span> Construction</h1>
                     <p class="mt-2 text-lg !text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non imperdiet nunc, eu fermentum elit. Nam ac enim nec lectus ullamcorper finibus imperdiet eget turpis. Praesent at nulla tincidunt, eleifend risus eget, suscipit erat. In quis est vulputate, eleifend massa vitae, consequat est.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sm:hidden inset-0 flex items-center">
+        <div class="w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+                <div class="backdrop-blur-sm p-6 rounded-xl  max-w-xl">
+                    <h1 class="text-4xl font-bold"><span class="text-primary">RAM</span> Construction</h1>
+                    <p class="mt-2 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non imperdiet nunc, eu fermentum elit. Nam ac enim nec lectus ullamcorper finibus imperdiet eget turpis. Praesent at nulla tincidunt, eleifend risus eget, suscipit erat. In quis est vulputate, eleifend massa vitae, consequat est.</p>
                 </div>
             </div>
         </div>

@@ -26,3 +26,31 @@ a:hover, a:focus {
 p, a {
   color: var(--color-dark);
 }
+
+.ram-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+}
+
+
+#menu-toggle {
+
+  
+  rect {
+    transition: transform .5s ease, opacity .5s ease;
+  }
+  
+  &.open {
+    
+    .top {
+      transform: rotate(45deg) translate(7px, -3px);
+    }
+
+    .middle {
+      opacity: 0;
+    }
+
+    .bottom {
+      transform: rotate(-45deg) translate(-16px, -6px);
+    }
+  }
+}

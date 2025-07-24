@@ -7,28 +7,34 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-slate-200'); ?>>
+<body <?php body_class('bg-slate-100'); ?>>
 
     <!-- Accessibility Skip Link -->
     <a href="#site-content" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-slate-200 text-black p-2 z-50">
         Skip to content
     </a>
 
-    <header class="bg-white shadow-sm border-b border-gray-200">
+    <header class="bg-white shadow-sm border-b border-slate-200">
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center gap-x-20 h-auto relative">
+        <div class="ram-container">
+            <div class="flex items-center justify-between gap-x-20 h-auto relative">
 
                 <!-- Logo -->
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="h-54 w-54 aspect-square !max-w-80">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:block hidden h-54 w-54 aspect-square !max-w-80">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:hidden block h-20 w-20 aspect-square !max-w-20">
                     <span class="sr-only">RAM Construction Group</span>
                 </a>
 
                 <!-- Mobile menu toggle -->
-                <button id="menu-toggle" class="md:hidden text-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="primary-menu" aria-expanded="false">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <button id="menu-toggle" class="md:hidden text-dark justify-self-end" aria-controls="primary-menu" aria-expanded="false">
+                    <svg width="32" height="32" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" arialabelledby="title">
+                        <title>Menu</title>
+                        <g class="menu-bars">
+                            <rect class="top" x="0" y="0" width="32" height="6" fill="currentColor" />
+                            <rect class="middle" x="0" y="13" width="32" height="6" fill="currentColor" />
+                            <rect class="bottom" x="0" y="26" width="32" height="6" fill="currentColor" />
+                        </g>
                     </svg>
                     <span class="sr-only">Toggle navigation</span>
                 </button>

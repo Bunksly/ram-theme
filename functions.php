@@ -108,7 +108,7 @@ function ram_enqueue_assets()
     // Slick JS + jQuery
     wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/slick/slick.min.js', ['jquery'], null, true);
 
-    // Your custom JS to init the slider
-    wp_enqueue_script('ram-slider', get_template_directory_uri() . '/assets/js/slider.js', ['jquery', 'slick-js'], null, true);
+    // Javascript
+    wp_enqueue_script('ram-slider', get_template_directory_uri() . '/assets/js/main.js', ['jquery', 'slick-js'], null, true);
 }
 add_action('wp_enqueue_scripts', 'ram_enqueue_assets');
