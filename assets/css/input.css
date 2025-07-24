@@ -74,3 +74,29 @@ p, a {
 #primary-menu > ul > li.current_page_ancestor > a {
   @apply bg-white text-black border-t-0 border-slate-200;
 }
+
+
+
+/* Stack buttons full width */
+#mobile-menu > ul {
+  @apply flex flex-col w-full;
+}
+
+/* Each item is block-level */
+#mobile-menu > ul > li {
+  @apply w-full;
+}
+
+/* Button styles */
+#mobile-menu > ul > li > a {
+  @apply block w-full text-center font-medium
+         py-4 px-2 /* big touch area */
+         transition-all duration-200 ease-in-out
+         bg-slate-100 text-dark border-b border-slate-200;
+}
+
+/* Active item (popping out) */
+#mobile-menu > ul > li.current-menu-item > a,
+#mobile-menu > ul > li.current_page_ancestor > a {
+  @apply bg-white text-black;
+}

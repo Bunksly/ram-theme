@@ -20,7 +20,7 @@
             <div class="flex items-center justify-between h-auto relative">
 
                 <!-- Logo -->
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2 pr-10 ">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2 pr-20 ">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:block hidden h-54 w-54 aspect-square !max-w-80">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:hidden block h-20 w-20 aspect-square !max-w-20">
                     <span class="sr-only">RAM Construction Group</span>
@@ -39,7 +39,7 @@
                     <span class="sr-only">Toggle navigation</span>
                 </button>
                 <div class="w-full hidden md:block pr-4 ">
-                    <div class="max-w-7xl mx-auto py-4 pl-10">
+                    <div class="max-w-7xl mx-auto py-4">
                         <div class="flex flex-col items-start gap-2">
                             <!-- Site Title -->
                             <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
@@ -69,12 +69,12 @@
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <div id="mobile-menu" class="md:hidden hidden">
             <?php
             wp_nav_menu([
                 'theme_location' => 'header_menu',
                 'container'      => false,
-                'menu_class'     => 'flex flex-col gap-2',
+                'menu_class'     => 'flex flex-col',
                 'fallback_cb'    => false,
             ]);
             ?>
