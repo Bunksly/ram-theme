@@ -100,3 +100,9 @@ p, a {
 #mobile-menu > ul > li.current_page_ancestor > a {
   @apply bg-white text-black;
 }
+
+.footer-menu {
+  a:hover {
+    @apply !text-primary !underline
+  }
+}
