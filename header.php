@@ -14,13 +14,13 @@
         Skip to content
     </a>
 
-    <header class="bg-white shadow-sm border-b border-slate-200">
+    <header class="bg-white shadow-md border-b border-slate-200">
 
         <div class="ram-container">
-            <div class="flex items-center justify-between gap-x-20 h-auto relative">
+            <div class="flex items-center justify-between h-auto relative">
 
                 <!-- Logo -->
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2 pr-10 ">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:block hidden h-54 w-54 aspect-square !max-w-80">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:hidden block h-20 w-20 aspect-square !max-w-20">
                     <span class="sr-only">RAM Construction Group</span>
@@ -38,8 +38,8 @@
                     </svg>
                     <span class="sr-only">Toggle navigation</span>
                 </button>
-                <div class="w-full hidden md:block pr-4">
-                    <div class="max-w-7xl mx-auto py-4">
+                <div class="w-full hidden md:block pr-4 ">
+                    <div class="max-w-7xl mx-auto py-4 pl-10">
                         <div class="flex flex-col items-start gap-2">
                             <!-- Site Title -->
                             <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
@@ -53,14 +53,13 @@
                     </div>
 
                     <!-- Divider -->
-                    <div class="border-t border-gray-300"></div>
                     <!-- Desktop Menu -->
-                    <nav id="primary-menu" class="flex space-x-4 py-4" aria-label="Main Menu">
+                    <nav id="primary-menu" aria-label="Main Menu">
                         <?php
                         wp_nav_menu([
                             'theme_location' => 'header_menu',
                             'container'      => false,
-                            'menu_class'     => 'flex flex-col md:flex-row justify-between w-full',
+                            'menu_class'     => 'flex w-full h-14', // Full width container
                             'fallback_cb'    => false,
                         ]);
                         ?>

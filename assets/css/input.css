@@ -18,11 +18,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a:hover, a:focus {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
-
 p, a {
   color: var(--color-dark);
 }
@@ -53,4 +48,29 @@ p, a {
       transform: rotate(-45deg) translate(-16px, -6px);
     }
   }
+}
+
+/* Make each li flex-grow equally */
+#primary-menu > ul {
+  @apply flex w-full border-x border-slate-200;
+}
+#primary-menu > ul > li {
+  @apply flex-1; /* equal width */
+}
+#primary-menu > ul > li > a {
+  @apply flex items-center justify-center 
+         h-full w-full text-center font-medium
+         transition-all duration-200 ease-in-out;
+}
+
+/* Inactive button (flat grey) */
+
+#primary-menu > ul > li > a {
+  @apply bg-slate-100 text-dark shadow-none hover:bg-gray-200 border-t border-slate-200;
+}
+
+/* Active button (raised white key) */
+#primary-menu > ul > li.current-menu-item > a,
+#primary-menu > ul > li.current_page_ancestor > a {
+  @apply bg-white text-black border-t-0 border-slate-200;
 }
