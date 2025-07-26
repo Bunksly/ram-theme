@@ -8,10 +8,13 @@ $repeater_rows = get_field('about_us_repeater');
 ?>
 
 <section class="ram-container">
-    <div class="max-w-4xl">
-        <h1><? echo $title ?></h1>
-        <div>
-            <? echo $content ?>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+            <h1><?php echo $title; ?></h1>
+            <div>
+                <?php echo $content; ?>
+            </div>
         </div>
     </div>
 </section>
@@ -30,7 +33,7 @@ $repeater_rows = get_field('about_us_repeater');
                 $description = $row['description'] ?? '';
                 $image       = $row['photo'] ?? '';
 
-                get_template_part('template-parts/card', 'null' , [
+                get_template_part('template-parts/card', 'null', [
                     'title'       => $name,
                     'description' => $description,
                     'image'       => $image,

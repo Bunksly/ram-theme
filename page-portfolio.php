@@ -6,9 +6,9 @@ $content = get_the_content();
 
 <section class="ram-container">
     <div class="max-w-4xl">
-        <h1><? echo $title ?></h1>
+        <h1><?php echo $title ?></h1>
         <div>
-            <? echo $content ?>
+            <?php echo $content ?>
         </div>
     </div>
 </section>
