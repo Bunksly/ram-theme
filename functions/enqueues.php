@@ -1,6 +1,6 @@
 <?php
 
-/* ENQUEUE TAILWIND STYLESHEET */
+/* ENQUEUE THE WHOLE INTERNET */
 function ram_theme_enqueue_assets()
 {
     //css stylesheets
@@ -21,6 +21,14 @@ function ram_theme_enqueue_assets()
     wp_localize_script('portfolio-slider', 'ramAjax', [
         'ajaxurl' => admin_url('admin-ajax.php')
     ]);
+
+    wp_enqueue_script(
+        'gallery-scroller',
+        get_template_directory_uri() . '/assets/js/gallery-scroller.js',
+        [],
+        null,
+        true
+    );
 
     // Slick styles
     wp_enqueue_style('slick-css', get_template_directory_uri() . '/assets/slick/slick.css');

@@ -15,8 +15,10 @@ get_header();
 </section>
 
 <?php
-// Fetch ALL gallery images from ALL portfolio posts
+// Fetch some gallery images from ALL portfolio posts
 $all_images = [];
+$limit = 9;
+$count = 0;
 
 $portfolio_posts = new WP_Query([
     'post_type'      => 'portfolio',
@@ -29,6 +31,8 @@ if ($portfolio_posts->have_posts()) :
         if ($gallery) {
             foreach ($gallery as $image) {
                 $all_images[] = $image;
+                $count++;
+                if ($count >= $limit) break 2; // stop after 9
             }
         }
     endwhile;
@@ -37,7 +41,7 @@ endif;
 ?>
 
 <?php if (!empty($all_images)) : ?>
-    <section class="ram-container py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section class="ram-container ram-gallery py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <?php foreach ($all_images as $image) : ?>
             <a href="<?php echo esc_url($image['url']); ?>"
                 class="block relative rounded-xs overflow-hidden hoverable-hard-shadow-stone glightbox"

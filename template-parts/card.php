@@ -22,7 +22,7 @@ $link        = $args['link'] ?? get_the_permalink();
         if (!empty($image)) {
             // If it's an attachment ID
             if (is_numeric($image)) {
-                echo wp_get_attachment_image($image, 'medium', false, ['class' => 'w-full h-64 object-cover']);
+                echo wp_get_attachment_image($image, 'large', false, ['class' => 'w-full h-64 object-cover']);
             } else {
                 echo '<img src="' . esc_url($image) . '" class="w-full h-64 object-cover" alt="' . esc_attr($title) . '">';
             }
