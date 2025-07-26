@@ -47,7 +47,7 @@ html {
   &.open {
     
     .top {
-      transform: rotate(45deg) transtone(7px, -3px);
+      transform: rotate(45deg) translate(7px, -3px);
     }
 
     .middle {
@@ -55,7 +55,7 @@ html {
     }
 
     .bottom {
-      transform: rotate(-45deg) transtone(-16px, -6px);
+      transform: rotate(-45deg) translate(-16px, -6px);
     }
   }
 }
@@ -153,4 +153,20 @@ h4 {
 
 h5 {
   @apply md:text-xl sm:text-lg text-base font-semibold mb-4 text-dark
+}
+
+.hard-shadow-white {
+  @apply shadow-[4px_4px_0_white]
+}
+
+.hard-shadow-primary {
+  @apply shadow-[4px_4px_0_var(--color-primary)]
+}
+
+.hard-shadow-black {
+  @apply shadow-[4px_4px_0_black]
+}
+
+.hard-shadow-stone {
+  @apply shadow-[4px_4px_0_var(--color-stone-300)]
 }

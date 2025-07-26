@@ -66,3 +66,11 @@ add_action('init', 'ram_theme_remove_comments_admin_bar');
 
 /* DISABLE GUTENBERG */
 add_filter('use_block_editor_for_post', '__return_false', 100);
+
+
+/* REMOVE DEFAULT POSTS FROM MENU */
+function ram_remove_posts_menu()
+{
+    remove_menu_page('edit.php'); // Removes the "Posts" menu
+}
+add_action('admin_menu', 'ram_remove_posts_menu');

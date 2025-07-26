@@ -7,8 +7,8 @@
             <div class="sm:flex absolute inset-0  hidden">
                 <div class="w-full">
                     <div class="ram-container">
-                        <div class="backdrop-blur-md bg-black/60   p-6 rounded-md text-white max-w-xl">
-                            <h1 class="text-white">Integrity</h1>
+                        <div class=" bg-primary p-6 rounded-xs text-white max-w-xl hard-shadow-white">
+                            <h1 class="!text-white">Integrity</h1>
                             <p class="mt-2 text-xl !text-white">Our team is committed to honesty, transparency, and ethical conduct in all aspects of our work.</p>
                         </div>
                     </div>
@@ -20,8 +20,8 @@
             <div class="sm:flex absolute inset-0  hidden">
                 <div class="w-full">
                     <div class="ram-container">
-                        <div class="backdrop-blur-md bg-black/60 p-6 rounded-md text-white max-w-xl">
-                            <h1 class=" text-white">Customer Satisfaction</h1>
+                        <div class=" bg-primary p-6 rounded-xs text-white max-w-xl hard-shadow-white">
+                            <h1 class=" !text-white">Customer Satisfaction</h1>
                             <p class="mt-2 text-xl !text-white"> We go above and beyond to exceed our clients' expectations and deliver projects that meet their needs and exceed their vision.</p>
                         </div>
                     </div>
@@ -33,8 +33,8 @@
             <div class="sm:flex absolute inset-0 hidden">
                 <div class="w-full">
                     <div class="ram-container">
-                        <div class="backdrop-blur-md bg-black/60  p-6 rounded-md text-white max-w-xl">
-                            <h1 class="text-white">Quality Craftsmanship</h1>
+                        <div class=" bg-primary  p-6 rounded-xs text-white max-w-xl hard-shadow-white">
+                            <h1 class="!text-white">Quality Craftsmanship</h1>
                             <p class="mt-2 text-xl !text-white">From the materials we use to the attention to detail in our workmanship, we are dedicated to delivering projects of the highest quality.</p>
                         </div>
                     </div>
