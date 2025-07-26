@@ -54,7 +54,7 @@
         </div>
 
         <!-- Bottom Row: Copyright -->
-        <div class="border-t border-slate-200 pt-4 text-center text-sm text-slate-500">
+        <div class="border-t border-slate-200 pt-4 text-end text-sm text-slate-500">
             © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
         </div>
     </div>
