@@ -1,5 +1,8 @@
 <?php
 
+/* turn on featured imagery */
+add_theme_support('post-thumbnails');
+
 /* ADD MENUS */
 function ram_theme_register_menus() {
 register_nav_menus([

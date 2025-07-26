@@ -11,20 +11,12 @@ function ram_load_more_portfolio_slide()
     ]);
 
     if ($query->have_posts()) : ?>
-        <div class="portfolio-slide">
-            <?php while ($query->have_posts()) : $query->the_post(); ?>
-                <div class="bg-white rounded-md shadow-md overflow-hidden">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <div class="h-48 overflow-hidden">
-                            <?php the_post_thumbnail('medium', ['class' => 'object-cover w-full h-full']); ?>
-                        </div>
-                    <?php endif; ?>
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold"><?php the_title(); ?></h2>
-                        <p class="mt-2 text-gray-700"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-                    </div>
-                </div>
-            <?php endwhile; ?>
+        <div class="portfolio-slide !grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+            <?php while ($query->have_posts()) : $query->the_post();
+
+                get_template_part('template-parts/card', 'null');
+                
+            endwhile; ?>
         </div>
 <?php
     endif;

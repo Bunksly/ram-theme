@@ -29,26 +29,15 @@ $repeater_rows = get_field('about_us_repeater');
                 $name        = $row['name'] ?? '';
                 $description = $row['description'] ?? '';
                 $image       = $row['photo'] ?? '';
-            ?>
-                <div class="bg-white rounded-xs hard-shadow-stone border border-stone-200 overflow-hidden">
-                    <!-- Image wrapper -->
-                    <div class="relative">
-                        <?php echo wp_get_attachment_image($image, 'medium', false, ['class' => 'w-full h-64 object-contain']); ?>
 
-                        <!-- Nameplate -->
-                        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-primary rounded-xs px-6 py-2">
-                            <h4 class=" !mb-0 !text-white"><?php echo esc_html($name); ?></h3>
-                        </div>
-                    </div>
+                get_template_part('template-parts/card', 'null' , [
+                    'title'       => $name,
+                    'description' => $description,
+                    'image'       => $image,
+                    'link' => false // attachment ID or image URL
+                ]);
 
-                    <!-- Description -->
-                    <div class="p-6 pt-10 text-center border-t border-stone-400">
-                        <p class="text-gray-700 text-base leading-relaxed">
-                            <?php echo esc_html($description); ?>
-                        </p>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+            endforeach; ?>
         </div>
     <?php endif; ?>
 

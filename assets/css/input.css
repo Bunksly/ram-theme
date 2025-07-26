@@ -1,27 +1,11 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/wp-content/themes/ram-theme/assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
   src: url('/wp-content/themes/ram-theme/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Nunito sans';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/wp-content/themes/ram-theme/assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
 @theme {
@@ -169,4 +153,13 @@ h5 {
 
 .hard-shadow-stone {
   @apply shadow-[4px_4px_0_var(--color-stone-300)]
+}
+
+.hoverable-hard-shadow-stone {
+  @apply shadow-[4px_4px_0_var(--color-stone-300)]
+}
+
+.hoverable-hard-shadow-stone:hover,
+.hoverable-hard-shadow-stone:focus {
+  @apply shadow-[4px_4px_0_var(--color-primary)]
 }
