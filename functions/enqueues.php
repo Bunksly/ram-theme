@@ -33,6 +33,6 @@ function ram_theme_enqueue_assets()
     wp_enqueue_script('ram-slider', get_template_directory_uri() . '/assets/js/slider.js', ['jquery', 'slick-js'], null, true);
 
     // Javascript
-    wp_enqueue_script('main-javascript', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], null, true);
+    wp_enqueue_script('main-javascript', get_template_directory_uri() . '/assets/js/main.js', ['jquery', 'slick-js'], null, true);
 }
 add_action('wp_enqueue_scripts', 'ram_theme_enqueue_assets');
