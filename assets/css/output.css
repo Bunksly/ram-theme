@@ -872,6 +872,11 @@
       white-space: normal;
     }
   }
+  .sm\:absolute {
+    @media (width >= 40rem) {
+      position: absolute;
+    }
+  }
   .sm\:flex {
     @media (width >= 40rem) {
       display: flex;

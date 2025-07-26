@@ -4,7 +4,7 @@
     <div class="slider h-full">
         <div class="relative h-full">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide1.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 1">
-            <div class="sm:flex absolute inset-0  hidden">
+            <div class="flex sm:absolute inset-0 relative">
                 <div class="w-full">
                     <div class="ram-container">
                         <div class=" bg-primary p-6 rounded-xs text-white max-w-xl hard-shadow-white">
@@ -17,7 +17,7 @@
         </div>
         <div class="relative h-full">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide2.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 2">
-            <div class="sm:flex absolute inset-0  hidden">
+            <div class="flex sm:absolute inset-0 relative">
                 <div class="w-full">
                     <div class="ram-container">
                         <div class=" bg-primary p-6 rounded-xs text-white max-w-xl hard-shadow-white">
@@ -30,7 +30,7 @@
         </div>
         <div class="relative h-full">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide3.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 3">
-            <div class="sm:flex absolute inset-0 hidden">
+            <div class="flex sm:absolute inset-0 relative">
                 <div class="w-full">
                     <div class="ram-container">
                         <div class=" bg-primary  p-6 rounded-xs text-white max-w-xl hard-shadow-white">

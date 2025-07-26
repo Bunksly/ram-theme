@@ -43,9 +43,29 @@ jQuery(function ($) {
     });
 
     $('#portfolio-prev-mobile').on('click', function () {
-        $('#portfolio-slider').slick('slickPrev');
+        $slider.slick('slickPrev');
     });
+    // Next button
     $('#portfolio-next-mobile').on('click', function () {
-        $('#portfolio-slider').slick('slickNext');
+        // If next slide already exists, just slide to it
+        if ($slider.slick('slickCurrentSlide') < $slider.slick('getSlick').slideCount - 1) {
+            $slider.slick('slickNext');
+            return;
+        }
+
+        if (loading) return;
+        loading = true;
+
+        $.post(ramAjax.ajaxurl, {
+            action: 'ram_load_more_portfolio_slide',
+            page: page
+        }, function (response) {
+            if (response) {
+                $slider.slick('slickAdd', response);
+                page++;
+                $slider.slick('slickNext');
+            }
+            loading = false;
+        });
     });
 });
