@@ -5,27 +5,37 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/wp-content/themes/ram-theme/assets/fonts/Roboto/Roboto-VariableFont_wdth,wght') format('ttf');
+  src: url('/wp-content/themes/ram-theme/assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/wp-content/themes/ram-theme/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito sans';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/wp-content/themes/ram-theme/assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
 @theme {
   --color-primary: #2683FE;
   --color-dark: oklch(21% 0.034 264.665);
-  --color-light: oklch(44.6% 0.03 256.802);
+  --color-light: oklch(0.346 0.03 256.802);
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+html {
+  font-size: 16px;
+  /* font-family: "Nunito sans", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
 }
-
-p, a {
-  color: var(--color-dark);
-}
-
-.ram-container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
-}
-
 
 #menu-toggle {
 
@@ -37,7 +47,7 @@ p, a {
   &.open {
     
     .top {
-      transform: rotate(45deg) translate(7px, -3px);
+      transform: rotate(45deg) transtone(7px, -3px);
     }
 
     .middle {
@@ -45,34 +55,32 @@ p, a {
     }
 
     .bottom {
-      transform: rotate(-45deg) translate(-16px, -6px);
+      transform: rotate(-45deg) transtone(-16px, -6px);
     }
   }
 }
 
 /* Make each li flex-grow equally */
 #primary-menu > ul {
-  @apply flex w-full border-x border-slate-200;
+  @apply flex w-full border-x border-stone-200;
 }
 #primary-menu > ul > li {
   @apply flex-1; /* equal width */
 }
 #primary-menu > ul > li > a {
-  @apply flex items-center justify-center 
-         h-full w-full text-center font-medium
-         transition-all duration-200 ease-in-out;
+  @apply flex items-center justify-center h-full w-full text-center font-medium;
 }
 
 /* Inactive button (flat grey) */
 
 #primary-menu > ul > li > a {
-  @apply bg-slate-100 text-dark shadow-none hover:bg-gray-200 border-t border-slate-200;
+  @apply bg-stone-100 text-dark shadow-none hover:bg-gray-200 border-t border-stone-200;
 }
 
 /* Active button (raised white key) */
 #primary-menu > ul > li.current-menu-item > a,
 #primary-menu > ul > li.current_page_ancestor > a {
-  @apply bg-white text-black border-t-0 border-slate-200;
+  @apply bg-white text-black border-t-0 border-stone-200;
 }
 
 
@@ -92,7 +100,7 @@ p, a {
   @apply block w-full text-center font-medium
          py-4 px-2 /* big touch area */
          transition-all duration-200 ease-in-out
-         bg-slate-100 text-dark border-b border-slate-200;
+         bg-stone-100 text-dark border-b border-stone-200;
 }
 
 /* Active item (popping out) */
@@ -117,4 +125,32 @@ p, a {
    -1px 0   0 white,
     0   1px 0 white,
     0  -1px 0 white;
+}
+
+.ram-container {
+  @apply max-w-7xl mx-auto p-4 sm:p-6 md:p-8
+}
+
+p, a {
+  @apply text-light text-base
+}
+
+h1 {
+  @apply md:text-5xl sm:text-4xl text-3xl font-bold mb-4 text-primary
+}
+
+h2 {
+  @apply md:text-4xl sm:text-3xl text-2xl font-bold mb-4 text-dark
+}
+
+h3 {
+  @apply md:text-3xl sm:text-2xl text-xl font-semibold mb-4 text-dark
+}
+
+h4 {
+  @apply md:text-2xl sm:text-xl text-lg font-semibold mb-4 text-dark
+}
+
+h5 {
+  @apply md:text-xl sm:text-lg text-base font-semibold mb-4 text-dark
 }

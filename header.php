@@ -7,20 +7,20 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-slate-100'); ?>>
+<body <?php body_class('bg-stone-100'); ?>>
 
     <!-- Accessibility Skip Link -->
-    <a href="#site-content" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-slate-200 text-black p-2 z-50">
+    <a href="#site-content" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-stone-200 text-black p-2 z-50">
         Skip to content
     </a>
 
-    <header class="bg-white shadow-md border-b border-slate-200">
+    <header class="bg-white shadow-md border-b border-stone-200">
 
-        <div class="ram-container">
+        <div class="ram-container !py-0">
             <div class="flex items-center justify-between h-auto relative">
 
                 <!-- Logo -->
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2 pr-20 ">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2 lg:pr-20 md:pr-10">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:block hidden h-54 w-54 aspect-square !max-w-80">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:hidden block h-20 w-20 aspect-square !max-w-20">
                     <span class="sr-only">RAM Construction Group</span>
@@ -38,17 +38,17 @@
                     </svg>
                     <span class="sr-only">Toggle navigation</span>
                 </button>
-                <div class="w-full hidden md:block pr-4 ">
+                <div class="w-full hidden md:block lg:pr-4 ">
                     <div class="max-w-7xl mx-auto py-4">
                         <div class="flex flex-col items-start gap-2">
                             <!-- Site Title -->
-                            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+                            <span class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold tracking-tight">
                                 <span class="text-primary block leading-none">RAM</span>
                                 <span class="text-dark leading-none">CONSTRUCTION</span>
-                            </h1>
+                            </span>
 
                             <!-- Tagline -->
-                            <span class="text-sm sm:text-base text-light">Building trust from the ground up.</span>
+                            <span class="text-base sm:text-lg mb-2 text-light">Building trust from the ground up.</span>
                         </div>
                     </div>
 

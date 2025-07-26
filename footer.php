@@ -1,10 +1,10 @@
-<footer class="bg-white border-t border-slate-200 py-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer class="bg-white border-t border-stone-200 py-10">
+    <div class="ram-container">
 
         <!-- Top Row: Footer Nav + ISO Logos -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             <div>
-                <p class="mb-4 text-xl font-bold">Quick Links</p>
+                <p class="mb-4 text-xl font-bold !text-dark">Quick Links</p>
                 <!-- Footer Menu -->
                 <nav class="space-y-2 footer-menu" aria-label="Footer Menu">
                     <?php
@@ -19,8 +19,8 @@
             </div>
             <!-- ISO Logos -->
             <div>
-                <p class="mb-4 font-bold text-xl">Accreditations</p>
-                <div class="flex items-center justify-center gap-4">
+                <p class="mb-4 font-bold text-xl !text-dark">Accreditations</p>
+                <div class="flex items-center lg:justify-center gap-4">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/CHAS-Elite-Accred-Logo.jpeg" alt="ISO 9001 Accreditation" class="h-34 w-auto">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Constructionline-Gold-Logo.jpg" alt="ISO 14001 Accreditation" class="h-34 w-auto">
                 </div>
@@ -28,15 +28,15 @@
 
             <!-- Contact + Social -->
             <div>
-                <p class="mb-4 font-bold text-xl md:text-end">Social Links</p>
-                <div class="md:text-right space-y-4">
+                <p class="mb-4 font-bold text-xl lg:text-end !text-dark">Contact</p>
+                <div class="md:text-right space-y-4 ">
                     <div class="">
-                        <p class="flex justify-end gap-2">Ross: <a href="tel:07507394305" class="block hover:!text-primary hover:underline transition">07507394305</a></p>
-                        <p class="flex justify-end gap-2">Andrew: <a href="tel:07507394305" class="block hover:!text-primary hover:underline transition">07507394305</a></p>
-                        <p class="flex justify-end gap-2">Michael: <a href="tel:07507394305" class="block  hover:!text-primary hover:underline transition">07507394305</a></p>
-                        <a href="mailto:info@example.com" class="block text-lg text-dark hover:!text-primary hover:underline transition">ram@ramconstructiongroup.co.uk</a>
+                        <p class="flex lg:justify-end gap-2 ">Ross: <a href="tel:07507394305" class="block hover:!text-primary hover:underline transition">07507394305</a></p>
+                        <p class="flex lg:justify-end gap-2 ">Andrew: <a href="tel:07507394305" class="block hover:!text-primary hover:underline transition">07507394305</a></p>
+                        <p class="flex lg:justify-end gap-2 ">Michael: <a href="tel:07507394305" class="block  hover:!text-primary hover:underline transition">07507394305</a></p>
+                        <a href="mailto:info@example.com" class="flex lg:justify-end justify-start text-lg hover:!text-primary hover:underline transition">ram@ramconstructiongroup.co.uk</a>
                     </div>
-                    <div class="flex justify-center md:justify-end gap-4">
+                    <div class="flex lg:justify-end gap-4">
                         <!-- Social Icons -->
                         <a href="#" aria-label="Facebook" class=" transition">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@
         </div>
 
         <!-- Bottom Row: Copyright -->
-        <div class="border-t border-slate-200 pt-4 text-end text-sm text-slate-500">
+        <div class="border-t border-stone-200 pt-4 text-end text-sm text-stone-500">
             © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
         </div>
     </div>
