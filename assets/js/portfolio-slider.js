@@ -41,4 +41,11 @@ jQuery(function ($) {
     $('#portfolio-prev').on('click', function () {
         $slider.slick('slickPrev');
     });
+
+    $('#portfolio-prev-mobile').on('click', function () {
+        $('#portfolio-slider').slick('slickPrev');
+    });
+    $('#portfolio-next-mobile').on('click', function () {
+        $('#portfolio-slider').slick('slickNext');
+    });
 });

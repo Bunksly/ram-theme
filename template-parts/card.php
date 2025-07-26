@@ -14,7 +14,7 @@ $description = $args['description'] ?? wp_trim_words(get_the_content(), 20);
 $image       = $args['image'] ?? get_post_thumbnail_id();
 $link        = $args['link'] ?? get_the_permalink();
 ?>
-<a href="<? echo esc_url($link); ?>" class="block bg-white rounded-xs border border-stone-200 overflow-hidden <?php echo $link ? 'hoverable-hard-shadow-stone' : 'hard-shadow-stone pointer-events-none'; ?>">
+<a href="<? echo esc_url($link); ?>" class="block bg-white rounded-xs border border-stone-200 overflow-hidden <?php echo $link ? 'hover:border-r-primary hover:border-b-primary hoverable-hard-shadow-stone' : 'hard-shadow-stone pointer-events-none'; ?>">
 
     <!-- Image wrapper -->
     <div class="relative">

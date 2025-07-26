@@ -15,7 +15,7 @@ function ram_load_more_portfolio_slide()
             <?php while ($query->have_posts()) : $query->the_post();
 
                 get_template_part('template-parts/card', 'null');
-                
+
             endwhile; ?>
         </div>
 <?php
@@ -25,3 +25,17 @@ function ram_load_more_portfolio_slide()
 }
 add_action('wp_ajax_ram_load_more_portfolio_slide', 'ram_load_more_portfolio_slide');
 add_action('wp_ajax_nopriv_ram_load_more_portfolio_slide', 'ram_load_more_portfolio_slide');
+
+
+add_filter('nav_menu_css_class', function ($classes, $item) {
+    // Check if we're on a single portfolio post
+    if (is_singular('portfolio')) {
+        // Get the portfolio page ID (replace 'portfolio' if your slug differs)
+        $portfolio_page = get_page_by_path('portfolio');
+
+        if ($portfolio_page && $item->object_id == $portfolio_page->ID) {
+            $classes[] = 'current-menu-item';
+        }
+    }
+    return $classes;
+}, 10, 2);
