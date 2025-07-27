@@ -43,6 +43,9 @@ function ram_theme_enqueue_assets()
     // Javascript
     wp_enqueue_script('main-javascript', get_template_directory_uri() . '/assets/js/main.js', ['jquery', 'slick-js'], null, true);
 
+    // dashicons
+    wp_enqueue_style('dashicons');
+
     wp_enqueue_style('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', [], null);
     wp_enqueue_script('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js', [], null, true);
     wp_add_inline_script('glightbox', 'const lightbox = GLightbox();');

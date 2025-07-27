@@ -114,12 +114,12 @@
 }
 
 /* Dots */
-.slick-dotted.slick-slider
+/* .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
-}
+} */
 
-.slick-dots
+/* .slick-dots
 {
     position: absolute;
     bottom: -25px;
@@ -201,4 +201,4 @@
 {
     opacity: .75;
     color: black;
-}
+} */

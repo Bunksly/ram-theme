@@ -139,6 +139,7 @@ h5 {
   @apply md:text-xl sm:text-lg text-base font-semibold mb-4 text-dark
 }
 
+
 .hard-shadow-white {
   @apply shadow-[4px_4px_0_white]
 }
@@ -162,4 +163,24 @@ h5 {
 .hoverable-hard-shadow-stone:hover,
 .hoverable-hard-shadow-stone:focus {
   @apply shadow-[4px_4px_0_var(--color-primary)]
+}
+
+.slick-dots {
+    @apply !hidden sm:!flex gap-2 justify-center absolute bottom-4 left-1/2 -translate-x-1/2 z-50;
+}
+
+/* Default rectangle */
+.slick-dot-custom {
+    width: 30px;
+    height: 10px;
+    background: white;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Active rectangle */
+.slick-dots li.slick-active button.slick-dot-custom {
+    width: 50px;
+    background: var(--color-primary)
 }

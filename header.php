@@ -44,7 +44,7 @@
                             <!-- Site Title -->
                             <span class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold tracking-tight">
                                 <span class="text-primary block leading-none">RAM</span>
-                                <span class="text-dark leading-none">CONSTRUCTION</span>
+                                <span class="text-dark leading-none">CONSTRUCTION GROUP</span>
                             </span>
 
                             <!-- Tagline -->

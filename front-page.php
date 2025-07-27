@@ -1,47 +1,39 @@
 <?php get_header(); ?>
 
-<section class="relative w-full max-h-[calc(100vh-240px)] overflow-hidden">
-    <div class="slider h-full">
-        <div class="relative h-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide1.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 1">
-            <div class="flex sm:absolute inset-0 relative">
-                <div class="w-full">
-                    <div class="ram-container">
-                        <div class=" bg-primary p-6 rounded-xs text-white max-w-xl hard-shadow-white">
-                            <h1 class="!text-white">Integrity</h1>
-                            <p class="mt-2 text-xl !text-white">Our team is committed to honesty, transparency, and ethical conduct in all aspects of our work.</p>
+<?php $carousel_repeater = get_field('front_page_carousel'); ?>
+
+<?php if ($carousel_repeater): ?>
+    <section class="relative w-full  overflow-hidden">
+        <div class="slider h-full sm:max-h-[calc(100vh-240px)]">
+            <?php foreach ($carousel_repeater as $slide):
+                $title = $slide['title'] ?? '';
+                $content = $slide['content'] ?? '';
+                $image = $slide['image'] ?? '';
+            ?>
+                <div class="relative h-full">
+                    <div class="flex sm:absolute h-[200px] z-50 inset-0 relative">
+                        <div class="w-full">
+                            <div class="ram-container">
+                                <div class="sm:bg-primary sm:p-6 sm:rounded-xs sm:text-white sm:max-w-xl sm:shadow-[4px_4px_0_white]">
+                                    <?php if ($title): ?>
+                                        <h1 class="sm:!text-white"><?php echo esc_html($title); ?></h1>
+                                    <?php endif; ?>
+                                    <?php if ($content): ?>
+                                        <p class="mt-2 text-xl sm:!text-white"><?php echo esc_html($content); ?></p>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="relative h-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide2.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 2">
-            <div class="flex sm:absolute inset-0 relative">
-                <div class="w-full">
-                    <div class="ram-container">
-                        <div class=" bg-primary p-6 rounded-xs text-white max-w-xl hard-shadow-white">
-                            <h1 class=" !text-white">Customer Satisfaction</h1>
-                            <p class="mt-2 text-xl !text-white"> We go above and beyond to exceed our clients' expectations and deliver projects that meet their needs and exceed their vision.</p>
-                        </div>
+                    <div class="relative w-full h-[300px] sm:h-[calc(100vh-240px)]">
+                        <?php echo wp_get_attachment_image($image['ID'], 'full', false, [
+                            'class' => 'absolute inset-0 w-full h-full object-cover'
+                        ]); ?>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <div class="relative h-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/slides/slide3.jpg" class="object-cover w-full h-full aspect-[16/9]" alt="Slide 3">
-            <div class="flex sm:absolute inset-0 relative">
-                <div class="w-full">
-                    <div class="ram-container">
-                        <div class=" bg-primary  p-6 rounded-xs text-white max-w-xl hard-shadow-white">
-                            <h1 class="!text-white">Quality Craftsmanship</h1>
-                            <p class="mt-2 text-xl !text-white">From the materials we use to the attention to detail in our workmanship, we are dedicated to delivering projects of the highest quality.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

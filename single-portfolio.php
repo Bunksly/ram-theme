@@ -3,6 +3,11 @@ get_header();
 $title   = get_the_title();
 $content = get_the_content();
 $gallery = get_field('gallery');
+$latest_portfolios = new WP_Query([
+    'post_type'      => 'portfolio',
+    'posts_per_page' => 5,
+    'post__not_in'   => [get_the_ID()] // Exclude current post
+]);
 ?>
 
 <section class="ram-container">
@@ -16,17 +21,12 @@ $gallery = get_field('gallery');
         </div>
 
         <!-- Sidebar -->
-        <aside class="space-y-6 bg-white rounded-xs hard-shadow-stone">
+        <aside class="sm:block hidden space-y-6 bg-white rounded-xs hard-shadow-stone">
             <div class="bg-primary px-4 py-2 mb-0">
                 <span class="text-lg font-semibold text-white">Latest Work</span>
             </div>
             <ul class="space-y-4 p-4">
                 <?php
-                $latest_portfolios = new WP_Query([
-                    'post_type'      => 'portfolio',
-                    'posts_per_page' => 5,
-                    'post__not_in'   => [get_the_ID()] // Exclude current post
-                ]);
 
                 if ($latest_portfolios->have_posts()) :
                     while ($latest_portfolios->have_posts()) : $latest_portfolios->the_post(); ?>
@@ -60,5 +60,35 @@ $gallery = get_field('gallery');
         <?php endforeach; ?>
     </section>
 <?php endif; ?>
+
+<section class="ram-container">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Sidebar -->
+        <aside class="sm:hidden block space-y-6 bg-white rounded-xs hard-shadow-stone">
+            <div class="bg-primary px-4 py-2 mb-0">
+                <span class="text-lg font-semibold text-white">Latest Work</span>
+            </div>
+            <ul class="space-y-4 p-4">
+                <?php
+
+                if ($latest_portfolios->have_posts()) :
+                    while ($latest_portfolios->have_posts()) : $latest_portfolios->the_post(); ?>
+                        <li>
+                            <a href="<?php the_permalink(); ?>"
+                                class="block hover:!text-primary hover:underline">
+                                <?php the_title(); ?>
+                            </a>
+                        </li>
+                <?php endwhile;
+                    wp_reset_postdata();
+                else :
+                    echo '<li>No portfolios yet.</li>';
+                endif;
+                ?>
+            </ul>
+        </aside>
+    </div>
+</section>
 
 <?php get_footer(); ?>
