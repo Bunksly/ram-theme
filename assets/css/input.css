@@ -160,8 +160,7 @@ h5 {
   @apply shadow-[4px_4px_0_var(--color-stone-300)]
 }
 
-.hoverable-hard-shadow-stone:hover,
-.hoverable-hard-shadow-stone:focus {
+.hoverable-hard-shadow-stone:hover {
   @apply shadow-[4px_4px_0_var(--color-primary)]
 }
 
