@@ -46,7 +46,7 @@ html {
 
 /* Make each li flex-grow equally */
 #primary-menu > ul {
-  @apply flex w-full border-x border-stone-200;
+  @apply flex w-full  border-stone-200;
 }
 #primary-menu > ul > li {
   @apply flex-1; /* equal width */
@@ -55,16 +55,24 @@ html {
   @apply flex items-center justify-center h-full w-full text-center font-medium;
 }
 
+#primary-menu > ul > li:first-child > a {
+  @apply border-l
+}
+
+#primary-menu > ul > li:last-of-type > a {
+  @apply border-r
+}
+
 /* Inactive button (flat grey) */
 
 #primary-menu > ul > li > a {
-  @apply bg-stone-100 text-dark shadow-none hover:bg-gray-200 border-t border-stone-200 inset-shadow-md;
+  @apply bg-stone-100 text-dark hover:bg-gray-200 border-t border-stone-200 shadow-[inset_0_6px_4px_-4px_rgba(0,0,0,0.05)];
 }
 
 /* Active button (raised white key) */
 #primary-menu > ul > li.current-menu-item > a,
 #primary-menu > ul > li.current_page_ancestor > a {
-  @apply bg-white text-black border-t-0 border-stone-200 inset-shadow-none; 
+  @apply bg-white text-black border-t-0 border-stone-200 border-x shadow-none; 
 }
 
 
