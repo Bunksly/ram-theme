@@ -1,7 +1,7 @@
 <?php
 get_header();
 $title   = get_the_title();
-$content = get_the_content();
+$content = apply_filters('the_content', get_the_content());
 $gallery = get_field('gallery');
 $latest_portfolios = new WP_Query([
     'post_type'      => 'portfolio',
@@ -15,7 +15,7 @@ $latest_portfolios = new WP_Query([
         <!-- Main Content -->
         <div class="lg:col-span-2">
             <h1><?php echo esc_html($title); ?></h1>
-            <div>
+            <div class="wysiwyg">
                 <?php echo wp_kses_post($content); ?>
             </div>
         </div>

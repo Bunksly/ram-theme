@@ -1,13 +1,13 @@
 <?php
 get_header();
 $title = get_the_title();
-$content = get_the_content();
+$content = apply_filters('the_content', get_the_content());
 ?>
 
 <section class="ram-container">
     <div class="max-w-4xl">
         <h1><?php echo $title ?></h1>
-        <div>
+        <div class="wysiwyg">
             <?php echo $content ?>
         </div>
     </div>

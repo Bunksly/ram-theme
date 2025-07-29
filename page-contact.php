@@ -1,7 +1,7 @@
 <?php
 get_header();
 $title = get_the_title();
-$content = get_the_content();
+$content = apply_filters('the_content', get_the_content());
 $side_image = get_field('side_image');
 $flexible_contact = get_field('contact');
 ?>
@@ -12,7 +12,7 @@ $flexible_contact = get_field('contact');
         <!-- Main Content -->
         <div class="lg:col-span-2 space-y-8">
             <h1><?php echo esc_html($title); ?></h1>
-            <div><?php echo wp_kses_post($content); ?></div>
+            <div class="wysiwyg"><?php echo wp_kses_post($content); ?></div>
 
             <?php if (have_rows('contact')): ?>
                 <ul class="space-y-4 mb-6">

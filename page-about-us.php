@@ -1,7 +1,7 @@
 <?php
 get_header();
 $title = get_the_title();
-$content = get_the_content();
+$content = apply_filters('the_content', get_the_content());
 $repeater_title = get_field('about_us_repeater_title');
 $repeater_rows = get_field('about_us_repeater');
 
@@ -12,7 +12,7 @@ $repeater_rows = get_field('about_us_repeater');
         <!-- Main Content -->
         <div class="lg:col-span-2">
             <h1><?php echo $title; ?></h1>
-            <div>
+            <div class="wysiwyg">
                 <?php echo $content; ?>
             </div>
         </div>

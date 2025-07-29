@@ -183,3 +183,25 @@ h5 {
     width: 50px;
     background: var(--color-primary)
 }
+
+.wysiwyg {
+  ul {
+    list-style: disc !important;
+    padding-left: 1.5rem !important; /* restore indentation */
+  }
+  ol {
+    list-style: decimal !important;
+    padding-left: 1.5rem !important;
+  }
+
+  p {
+    margin-bottom: 1rem !important;
+  }
+
+  blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1rem;
+    color: #555;
+    font-style: italic;
+  }
+}

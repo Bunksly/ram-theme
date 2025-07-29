@@ -51,8 +51,6 @@
                             <span class="text-base sm:text-lg mb-2 text-light">Building trust from the ground up.</span>
                         </div>
                     </div>
-
-                    <!-- Divider -->
                     <!-- Desktop Menu -->
                     <nav id="primary-menu" aria-label="Main Menu">
                         <?php
