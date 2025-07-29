@@ -36,7 +36,7 @@ $link        = $args['link'] ?? get_the_permalink();
     </div>
 
     <!-- Description -->
-    <div class="p-6 pt-10 text-center border-t border-stone-400">
+    <div class="p-6 pt-10  border-t border-stone-400">
         <p class="text-gray-700 text-base leading-relaxed">
             <?php echo esc_html($description); ?>
         </p>
