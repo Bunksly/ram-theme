@@ -58,13 +58,13 @@ html {
 /* Inactive button (flat grey) */
 
 #primary-menu > ul > li > a {
-  @apply bg-stone-100 text-dark shadow-none hover:bg-gray-200 border-t border-stone-200;
+  @apply bg-stone-100 text-dark shadow-none hover:bg-gray-200 border-t border-stone-200 inset-shadow-md;
 }
 
 /* Active button (raised white key) */
 #primary-menu > ul > li.current-menu-item > a,
 #primary-menu > ul > li.current_page_ancestor > a {
-  @apply bg-white text-black border-t-0 border-stone-200;
+  @apply bg-white text-black border-t-0 border-stone-200 inset-shadow-none; 
 }
 
 

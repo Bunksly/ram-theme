@@ -21,8 +21,7 @@
 
                 <!-- Logo -->
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2 lg:pr-20 md:pr-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:block hidden h-54 w-54 aspect-square !max-w-80">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo.jpg" alt="RAM Construction Logo" class="md:hidden block h-20 w-20 aspect-square !max-w-20">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ram_logo_circle.png" alt="RAM Construction Logo" class="block lg:h-45 lg:w-45 md:h-40 md:w-40 md:my-0 my-2 h-20 w-20 aspect-square !max-w-80">
                     <span class="sr-only">RAM Construction Group</span>
                 </a>
 
